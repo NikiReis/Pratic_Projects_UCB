@@ -1,6 +1,6 @@
 # Pratic_Projects_UCB
 
-Universidade Católica de Brasília
+Catholic University of Brasilia 
 
 Computer Science Bachelor
 
