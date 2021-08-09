@@ -1,7 +1,7 @@
-# Projetos_Praticos_UCB
+# Pratic_Projects_UCB
 
 Universidade Católica de Brasília
 
-Engenharia de Software
+Computer Science Bachelor
 
-Projetos Práticos 1 e 2 - Algoritmos e Programação 
+Pratic Projects 1 and 2 - Algorithms and Programmation
