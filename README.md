@@ -2,6 +2,6 @@
 
 Catholic University of Brasilia 
 
-Computer Science Bachelor
+Course: Computer Science 
 
 Pratic Projects 1 and 2 - Algorithms and Programmation
