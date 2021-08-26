@@ -1,0 +1,31 @@
+PT - BR 
+Descrição do Segundo Projeto Prático na Linguagem C - Algoritmos e Programação 
+
+Tema: Venda de Passagens Aéreas 
+
+A empresa SALUMAR LINHAS AEREAS está com problemas no seu sistema de venda de passagens. O presidente da empresa, insatisfeito com os problemas ocorridos, resolveu solicitar um novo sistema, você foi contratado para elaborar um algoritmo, e seu respectivo programa em C para controlar as vendas das passagens. Como a sua solução (algoritmo/programa) será utilizada para venda em diversos destinos, o seu algoritmo/programa, deverá solicitar o nome do destino, que não pode ser nulo, e a quantidade de assentos existente para o avião selecionado para aquele destino. Sabe-se que a quantidade de assentos dos aviões da empresa será sempre maior ou igual a 90 assentos, mas não ultrapassará 200, e isto depende da capacidade de cada avião.
+As passagens serão vendidas por meio de reservas que poderão ser confirmadas ou canceladas posteriormente.
+O valor da passagem será diferenciado, mas em reais (R$), de acordo com a idade do interessado (até 5 anos 50% de desconto) e o destino. O valor da passagem deverá ser solicitado no início da execução de sua solução, somente uma única vez, após a entrada do destino. Estes valores serão utilizados por seu algoritmo/programa até que o mesmo termine.
+O seu algoritmo / programa deverá possuir um menu que possibilite que a empresa:
+•	Verifique a ocupação de um determinado voo, lugares disponíveis (D), com reservas
+(R) ou com vendas confirmadas (C), por meio da apresentação do mapa dos lugares em uma janela limpa que mostre todos os lugares possíveis para o destino selecionado (usar R para reserva, C para venda confirmada ou D para disponível);
+•	Efetuar uma reserva por meio do fornecimento do número do assento disponível.
+•	Cada reserva receberá um número único para sua identificação, não podendo este número ser repetido em hipótese alguma, sendo seu valor inicial 1;
+•	Realizar o cancelamento de uma reserva por meio do fornecimento de seu número único de identificação. Para que o cancelamento seja realizado a reserva deve existir;
+•	Efetivar a confirmação de venda de uma reserva por meio do fornecimento de seu número único de identificação. Para que a confirmação seja realizada a reserva deve existir;
+•	Mostrar a quantidade de assentos com reservas, com vendas confirmadas e disponíveis, além do valor total em reais com as vendas já confirmadas para determinado destino.
+O cálculo do valor a ser pago por cada passagem solicitada deverá ser apresentado logo após ser efetuada uma reserva, ou seja, após o fornecimento dos dados corretos e validados do comprador. Caso o comprador interessado desista do reserva, posteriormente, ele poderá cancelar.
+
+
+É importante destacar que a apresentação final na janela de execução do programa (janela de saída de dados) é um tópico importante na avaliação do seu trabalho final e deverá acontecer com todos os dados em maiúsculos para facilitar a visão dos usuários do programa em C.
+O conteúdo de pesquisa relacionado a este trabalho final acontecerá sobre o uso de cores no programa em C que será entregue. Sua implementação deverá no mínimo efetuar a implementação das cores indicadas sobre a situação de cada assento do avião, devendo ser respeitada, exatamente, as cores das letras que indicam:
+
+•	R para reserva com a cor vermelha para a letra R;
+•	C para venda confirmada com a cor azul para a letra C;
+•	D para disponível com a cor verde para a letra D.
+
+Observações Importantes:
+-	Atividade individual, onde a cópia resultará na avaliação mínima (zero) para todos os envolvidos;
+-	Sua solução deve possuir boa apresentação - nível adequado no algoritmo e profissional no programa em C;
+-	Deverá ser entregue o código fonte do programa em C, até a data especificada por seu professor no ambiente Moodle;
+-	Na primeira aula, após a entrega, alguns alunos poderão ser selecionados para apresentação e esclarecimentos dos trabalhos entregues.
