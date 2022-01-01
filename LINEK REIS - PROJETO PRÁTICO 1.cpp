@@ -1,124 +1,124 @@
 // Aluno: Linek Ferreira Almeida dos Reis
-// MatrÌcula: UC21106202
+// Matr√≠cula: UC21106202
 // Curso: Engenharia de Software
 // Data: 26/04/2021
-// InstituiÁ„o: Universidade CatÛlica de BrasÌlia
-// Local: BrasÌlia - DF, Brasil
+// Institui√ß√£o: Universidade Cat√≥lica de Bras√≠lia
+// Local: Bras√≠lia - DF, Brasil
 
-//Conceitos do CÛdigo Limpo utilizados: Coment·rios Iform·tivos, Nomes PassÌveis de Busca, Vari·veis Auto Explicativas e Nomes Pronunci·veis
+//Conceitos do C√≥digo Limpo utilizados: Coment√°rios Iform√°tivos, Nomes Pass√≠veis de Busca, Vari√°veis Auto Explicativas e Nomes Pronunci√°veis
 
-// declaraÁ„o de bibliotecas
+// declara√ß√£o de bibliotecas
 
-#include<stdio.h> // biblioteca respons·vel pelo funcionamento do scanf e printf
-#include<string.h> // biblioteca respons·vel por manipulaÁ„o de string
-#include<stdlib.h> // biblioteca necess·ria para a ativaÁ„o do 'system("cls")
-#include<locale.h> // biblioteca respos·vel por fazer o cÛdigo aceitar acentuaÁ„o
+#include<stdio.h> // biblioteca respons√°vel pelo funcionamento do scanf e printf
+#include<string.h> // biblioteca respons√°vel por manipula√ß√£o de string
+#include<stdlib.h> // biblioteca necess√°ria para a ativa√ß√£o do 'system("cls")
+#include<locale.h> // biblioteca respos√°vel por fazer o c√≥digo aceitar acentua√ß√£o
 
-//declaraÁ„o de vari·veis
+//declara√ß√£o de vari√°veis
 
-int adultos,idosos,maiordeidadetot,idade,maiordeidadefe,maiordeidademas,criancas,masculino,feminino,adolescentes; // vari·veis respons·veis por receber as classificaÁıes de faixa et·ria 
-int Numeropessoas,contador,sessao,sexo; // vari·veis respons·veis pelo pelo funcionamento de estruturas de repetiÁ„o
-char nomefilme[30]; // vari·vel por receber o nome do filme que ser· exibido nas sessıes 
+int adultos,idosos,maiordeidadetot,idade,maiordeidadefe,maiordeidademas,criancas,masculino,feminino,adolescentes; // vari√°veis respons√°veis por receber as classifica√ß√µes de faixa et√°ria 
+int Numeropessoas,contador,sessao,sexo; // vari√°veis respons√°veis pelo pelo funcionamento de estruturas de repeti√ß√£o
+char nomefilme[30]; // vari√°vel por receber o nome do filme que ser√° exibido nas sess√µes 
 
 // inicio do algoritmo
 
 int main(){ 
 	
-	setlocale(LC_ALL, "Portuguese");                                              //  declaraÁ„o de funÁ„o dentro da biblioteca #include<locale.h>	
+	setlocale(LC_ALL, "Portuguese");                                              //  declara√ß√£o de fun√ß√£o dentro da biblioteca #include<locale.h>	
 	
-	printf("------------------\n");                                             //  printa na tela a mensagem entre aspas 
-	printf("   CINE BRASÕLIA  \n");                                            //  printa na tela a mensagem entre aspas 
-	printf("------------------\n");                                           //  printa na tela a mensagem entre aspas 
+	printf("------------------\n");                                              
+	printf("   CINE BRAS√çLIA  \n");                                             
+	printf("------------------\n");                                           
 
-	while(sessao!=2){                                                            //  estrutura de repetiÁ„o de leitura de sessıes
-		 	printf("N˙mero de Sessıes: ");                                         //  printa na tela a mensagem entre aspas 
-			scanf("%d",&sessao);                                            //  leitura do valor introduzido
-			fflush(stdin);                                                 //  limpa cache de memÛria
+	while(sessao!=2){                                                            //  estrutura de repeti√ß√£o de leitura de sess√µes
+		 	printf("N√∫mero de Sess√µes: ");                                          
+			scanf("%d",&sessao);                                            
+			fflush(stdin);                                                 //  limpa cache de mem√≥ria
 
 				if(sessao!=2){                                                                   //  estrutura condicional dentro do while
-					printf("Valor inv·lido\n");                                         //  printa na tela a mensagem entre aspas 
-					printf("O n˙mero de sessıes dever ser exatamente 2\n");	                   //  printa na tela a mensagem entre aspas 
+					printf("Valor inv√°lido\n");                                          
+					printf("O n√∫mero de sess√µes dever ser exatamente 2\n");	                    
 							}                                                                     //  fim da estrutura condicional
-	}                                                                    //  fim da estrutura de repetiÁ„o
+	}                                                                    //  fim da estrutura de repeti√ß√£o
 
-	while(strlen(nomefilme)<=5 || strlen(nomefilme)>=40 ){                        // estrutura de repetiÁ„o while comparando strings
+	while(strlen(nomefilme)<=5 || strlen(nomefilme)>=40 ){                        // estrutura de repeti√ß√£o while comparando strings
 
-		printf("Digite o nome do filme: ");                                         //  printa na tela a mensagem entre aspas 
-			fflush(stdin);                                                     //  limpa o cache de memÛria 
+		printf("Digite o nome do filme: ");                                         
+			fflush(stdin);                                                     //  limpa o cache de mem√≥ria 
 			fgets(nomefilme,sizeof(nomefilme),stdin);                         //  leitura do valor introduzido 
 			
-			if(strlen(nomefilme)<=5 || strlen(nomefilme)>=40){                 //  estrutura condicional dentro da estrutura de repetiÁ„o 'while'
+			if(strlen(nomefilme)<=5 || strlen(nomefilme)>=40){                 //  estrutura condicional dentro da estrutura de repeti√ß√£o 'while'
 	
-			 printf("O nome do filme deve conter no mÌnimo 5\n");             //  printa na tela a mensagem entre aspas 
-			 printf("e no m·ximo 40 caracteres\n");		
+			 printf("O nome do filme deve conter no m√≠nimo 5\n");             
+			 printf("e no m√°ximo 40 caracteres\n");		
 			}                                                                 //  fim da estrutura condicional 
-	}                                                               //  fim da estrutura de repetiÁ„o		
+	}                                                               //  fim da estrutura de repeti√ß√£o		
 
-while(Numeropessoas<10){                                                      //  estrutura de repetiÁ„o primaria 
-	printf("Digite quantas pessoas assitiram o filme: ");                    //  printa na tela a mensagem entre aspas 
+while(Numeropessoas<10){                                                      //  estrutura de repeti√ß√£o primaria 
+	printf("Digite quantas pessoas assitiram o filme: ");                    
 
-		while(scanf("%d",&Numeropessoas)!=1){                                            //  estrutura de repetiÁ„o secundaria dentro da prim·ria
-		printf("Digite apenas valores inteiros\n");                                 //  printa na tela a mensagem entre aspas
-		printf("Digite quantas pessoas assitiram o filme: ");	                   //  printa na tela a mensagem entre aspas 
-		while(getchar() != '\n');                                                 //  while de comparaÁ„o que n„o aceita valores em branco 
-    	} 	                                                                 //  fim da estrutura de repetiÁ„o	secund·ria
+		while(scanf("%d",&Numeropessoas)!=1){                                            //  estrutura de repeti√ß√£o secundaria dentro da prim√°ria
+		printf("Digite apenas valores inteiros\n");                                 
+		printf("Digite quantas pessoas assitiram o filme: ");	                    
+		while(getchar() != '\n');                                                  
+    	} 	                                                                 //  fim da estrutura de repeti√ß√£o	secund√°ria
 		
 		if(Numeropessoas<10)                                                
-    	printf("A quantidade mÌnima de pessoas dever ser 10\n");              //  printa na tela a mensagem entre aspas                                                                        //  fim da estrutura condicional dentro da estrutura de repetiÁ„o pricipal
+    	printf("A quantidade m√≠nima de pessoas dever ser 10\n");              //  printa na tela a mensagem entre aspas                                                                        //  fim da estrutura condicional dentro da estrutura de repeti√ß√£o pricipal
 	
 }                                                                        //  fim da estrutura while principal
 
 system("cls");                                                                 //  limpa a tela do prompt de comando 
 
-for(contador=0;contador<Numeropessoas;contador++){                           //  abertura de estrutura de repetiÁ„o 'for'
+for(contador=0;contador<Numeropessoas;contador++){                           //  abertura de estrutura de repeti√ß√£o 'for'
 
 system("cls");
 
-	printf("Sexo dos participantes\n");                                         //  printa na tela a mensagem em aspas
-	printf("[1] Masculino\n");                                                 //  printa na tela a mensagem em aspas
-	printf("[2] Feminino\n");                                                 //  printa na tela a mensagem em aspas
-	printf("Escolha o sexo: ");                                              //  printa na tela a mensagem em aspas
+	printf("Sexo dos participantes\n");                                         
+	printf("[1] Masculino\n");                                                 
+	printf("[2] Feminino\n");                                                
+	printf("Escolha o sexo: ");                                              
 	
-		while(scanf("%d",&sexo)!=1){                                             //  estrututa de repetiÁ„o de comparaÁ„o de dados introduzidos
+		while(scanf("%d",&sexo)!=1){                                             //  estrututa de repeti√ß√£o de compara√ß√£o de dados introduzidos
 		   system("cls");                                                        //  limpa a tela 
-		   printf("Digite 1 para masculino\nDigite 2 para feminino\n");             //  printa na tela a mensagem em aspas	
-	       printf("Escolha o sexo dos participante: \n");                          //  printa na tela a mensagem em aspas
+		   printf("Digite 1 para masculino\nDigite 2 para feminino\n");             	
+	       printf("Escolha o sexo dos participante: \n");                          
 
-		while(getchar() != '\n');                                                     //  while de comparaÁ„o que n„o aceita valores em branco
-		}                                                                        //  fim da estrutura de repetiÁ„o while dentro da estrutura de repetiÁ„o 'for'
+		while(getchar() != '\n');                                                     //  while de compara√ß√£o que n√£o aceita valores em branco
+		}                                                                        //  fim da estrutura de repeti√ß√£o while dentro da estrutura de repeti√ß√£o 'for'
 	
 		switch(sexo){                                                             //  abertura de estrutura switch
-	  		case 1:                                                                //  declaraÁ„o de caso 
+	  		case 1:                                                                //  declara√ß√£o de caso 
 	  	
-		  		masculino=masculino+1;                                                //  implementaÁ„o de vari·vel
-	  			printf("Digite a idade do participante: ");                            //  printa na tela a mensagem em aspas
-		 		scanf("%d",&idade);                                               //  leitura do valor introduzido 
-		 		fflush(stdin);                                                   // limpa o cache de memÛria
+		  		masculino=masculino+1;                                                //  implementa√ß√£o de vari√°vel
+	  			printf("Digite a idade do participante: ");                            
+		 		scanf("%d",&idade);                                               
+		 		fflush(stdin);                                                   // limpa o cache de mem√≥ria
 		 	
-					while(idade<3 || idade>100){                                             //  estrututa de repetiÁ„o de comparaÁ„o de entrada de dados
+					while(idade<3 || idade>100){                                             //  estrututa de repeti√ß√£o de compara√ß√£o de entrada de dados
 			
-					printf("Idade Iv·lida\n");                                         //  printa na tela a mensagem dentro das aspas
-					printf("Digite uma idade entre 3 e 100 anos: ");                  //  printa na tela a mensagem dentro das aspas
+					printf("Idade Iv√°lida\n");                                         
+					printf("Digite uma idade entre 3 e 100 anos: ");                  
 					scanf("%d",&idade);	                                             //  leitura do valor introduzido 
 		
-					}                                                                   //  fim da estrutura de repetiÁ„o
+					}                                                                   //  fim da estrutura de repeti√ß√£o
 		
 			if(idade>=3 && idade<=13){                                            // abertura estrutura condicional	 
-			criancas=criancas+1;	                                         //  implementaÁ„o de vari·vel
+			criancas=criancas+1;	                                         
 			}                                                                   //  fim da estrutura condicional
 		
 			else if(idade>=14 && idade<=17){                                      // abertura estrutura condicional
-			adolescentes = adolescentes+1;	                                 //  implementaÁ„o de vari·vel
+			adolescentes = adolescentes+1;	                                 
 			}                                                                   //  fim da estrutura condicional
 		
 			else if(idade>=18 && idade<=64){                                      // abertura estrutura condicional
-			maiordeidademas=maiordeidademas+1;                               //  implementaÁ„o de vari·vel
-			adultos=adultos+1;	                                            //  implementaÁ„o de vari·vel
+			maiordeidademas=maiordeidademas+1;                               
+			adultos=adultos+1;	                                            
 			}                                                                  //  fim da estrutura condicional
 		
 			else if(idade>=65 && idade<=100){                                     // abertura estrutura condicional
-			maiordeidademas=maiordeidademas+1;                               //  implementaÁ„o de vari·vel
-			idosos=idosos+1;                                                //  implementaÁ„o de vari·vel
+			maiordeidademas=maiordeidademas+1;                               
+			idosos=idosos+1;                                                
 			} 	                                                               // fim da estrutura condicional
 	
 		break;                                                           // quebra do case 1
@@ -130,30 +130,30 @@ system("cls");
 		 		scanf("%d",&idade);
 		 		fflush(stdin);
 		 	
-					while(idade<3 || idade>100){                                           //  estrututa de repetiÁ„o
+					while(idade<3 || idade>100){                                           //  estrututa de repeti√ß√£o
 			
-						printf("Idade Iv·lida\n");                                       // printa na tela a mensagem dentro das aspas
-						printf("Digite uma idade entre 3 e 100 anos: ");                // printa na tela a mensagem dentro das aspas
+						printf("Idade Iv√°lida\n");                                       
+						printf("Digite uma idade entre 3 e 100 anos: ");                
 						scanf("%d",&idade);	                                           //  leitura do valor introduzido 	
 		
-					}                                                                //  fim da estrutura de repetiÁ„o
+					}                                                                //  fim da estrutura de repeti√ß√£o
 		
 		 	if(idade>=3 && idade<=13){                                         // abertura estrutura condicional
-			criancas=criancas+1;	                                       //  implementaÁ„o de vari·vel
+			criancas=criancas+1;	                                       
 			}                                                                 // fim da estrutura condicional
 		
 			else if(idade>=14 && idade<=17){                                  // abertura estrutura condicional
-			adolescentes = adolescentes+1;                               //  implementaÁ„o de vari·vel
+			adolescentes = adolescentes+1;                               
 			}                                                               // fim da estrutura condicional
 		
 			else if(idade>=18 && idade<=64){                                  // abertura estrutura condicional
-			maiordeidadefe=maiordeidadefe+1;                             //  implementaÁ„o de vari·vel
-			adultos=adultos+1;                                          //  implementaÁ„o de vari·vel
+			maiordeidadefe=maiordeidadefe+1;                            
+			adultos=adultos+1;                                          
 			}                                                              //   fim da estrutura condicional
 		
 			else if(idade>=65 && idade<=100){                                    // abertura estrutura condicional
-			idosos=idosos+1;                                                //  implementaÁ„o de vari·vel
-			maiordeidadefe=maiordeidadefe+1;                               //  implementaÁ„o de vari·vel
+			idosos=idosos+1;                                                
+			maiordeidadefe=maiordeidadefe+1;                               
 			}	                                                              // fim da estrutura condicional
 
 		break;                                                                 // quebra do case 2
@@ -161,46 +161,46 @@ system("cls");
 		}                                                                    // fim da estrutura switch
 
 	if(idade>=18 && idade<=100)                                       // abertura estrutura condicional
-		maiordeidadetot=maiordeidadetot+1;                    //  implementaÁ„o de vari·vel
+		maiordeidadetot=maiordeidadetot+1;                   
 	 
-}                                                               // fim da estrutura de repetiÁ„o 'for'
+}                                                               // fim da estrutura de repeti√ß√£o 'for'
 	
 	system("cls");                                                                   //  limpa a tela do prompt de comando 
 	
-printf("Filme assistido nas duas sessıes: %s",nomefilme);                          //  printa na tela a mensagem dentro das aspas para criaÁ„o de uma tabela
-printf("------------------------------------------------\n");	                       //  printa na tela a mensagem dentro das aspas para criaÁ„o de uma tabela
-printf("             Tabela de Resultados               \n");                         //  printa na tela a mensagem dentro das aspas para criaÁ„o de uma tabela
-printf("------------------------------------------------\n");                        //  printa na tela a mensagem dentro das aspas para criaÁ„o de uma tabela
-printf("de 3 atÈ 13 anos   | CrianÁas      | %d         \n",criancas);              //  printa na tela a mensagem dentro das aspas com vari·vel inclusa
-printf("de 14 atÈ 17 anos  | Adolescentes  | %d         \n",adolescentes);         //  printa na tela a mensagem dentro das aspas com vari·vel inclusa
-printf("de 18 atÈ 64 anos  | Adultos       | %d         \n",adultos);             //  printa na tela a mensagem dentro das aspas com vari·vel inclusa
-printf("de 65 atÈ 100 anos | Idosos        | %d         \n",idosos);	         //  printa na tela a mensagem dentro das aspas com vari·vel inclusa
-printf("------------------------------------------------\n");                   //  printa na tela a mensagem dentro das aspas para criaÁ„o de uma tabela
+printf("Filme assistido nas duas sess√µes: %s",nomefilme);                          //  printa na tela a mensagem dentro das aspas para cria√ß√£o de uma tabela
+printf("------------------------------------------------\n");	                       
+printf("             Tabela de Resultados               \n");                         
+printf("------------------------------------------------\n");                        //  printa na tela a mensagem dentro das aspas para cria√ß√£o de uma tabela
+printf("de 3 at√© 13 anos   | Crian√ßas      | %d         \n",criancas);             
+printf("de 14 at√© 17 anos  | Adolescentes  | %d         \n",adolescentes);         
+printf("de 18 at√© 64 anos  | Adultos       | %d         \n",adultos);             
+printf("de 65 at√© 100 anos | Idosos        | %d         \n",idosos);	         
+printf("------------------------------------------------\n");                   
 
-printf("Aperte qualquer bot„o para continuar com os resultados\n");                //  printa na tela a mensagem dentro das aspas
+printf("Aperte qualquer bot√£o para continuar com os resultados\n");               
 system("pause");                                                                  // pausa o sistema
-system("cls");                                                                   // limpa a tela para a visualizaÁ„o da prÛxima tabela
+system("cls");                                                                   // limpa a tela para a visualiza√ß√£o da pr√≥xima tabela
 
-printf("|      Maiores de 18 anos      \n");                                      //  printa na tela a mensagem dentro das aspas para criaÁ„o de uma tabela
-printf("|------------------------------\n");                                     //  printa na tela a mensagem dentro das aspas para criaÁ„o de uma tabela
-printf("|Quantidade Total  | %d        \n",maiordeidadetot);                    //  printa na tela a mensagem dentro das aspas com vari·vel inclusa
-printf("|Sexo Feminino     | %d        \n",maiordeidadefe);                    //  printa na tela a mensagem dentro das aspas com vari·vel inclusa
-printf("|Sexo Masculino    | %d        \n",maiordeidademas);                  //  printa na tela a mensagem dentro das aspas com vari·vel inclusa
-printf("-------------------------------\n");                                 //  printa na tela a mensagem dentro das aspas para criaÁ„o de uma tabela
+printf("|      Maiores de 18 anos      \n");                                      //  printa na tela a mensagem dentro das aspas para cria√ß√£o de uma tabela
+printf("|------------------------------\n");                                     
+printf("|Quantidade Total  | %d        \n",maiordeidadetot);                    
+printf("|Sexo Feminino     | %d        \n",maiordeidadefe);                    
+printf("|Sexo Masculino    | %d        \n",maiordeidademas);                  
+printf("-------------------------------\n");                                 //  printa na tela a mensagem dentro das aspas para cria√ß√£o de uma tabela
 
-printf("Aperte qualquer bot„o para continuar com os resultados\n");               //  printa na tela a mensagem dentro das aspas
+printf("Aperte qualquer bot√£o para continuar com os resultados\n");               
 system("pause");                                                                 // pausa o sistema
-system("cls");                                                                  // limpa a tela para a visualizaÁ„o da prÛxima tabela
+system("cls");                                                                  // limpa a tela para a visualiza√ß√£o da pr√≥xima tabela
 
-printf(" Quantidades por Sexo \n");                                            //  printa na tela a mensagem dentro das aspas para criaÁ„o de uma tabela
-printf("----------------------\n");                                           //  printa na tela a mensagem dentro das aspas para criaÁ„o de uma tabela
-printf("|Feminino  | %d       \n",feminino);                                 //  printa na tela a mensagem dentro das aspas com vari·vel inclusa
-printf("|Masculino | %d       \n",masculino);                               //  printa na tela a mensagem dentro das aspas com vari·vel inclusa
-printf("----------------------\n");                                        //  printa na tela a mensagem dentro das aspas para criaÁ„o de uma tabela
+printf(" Quantidades por Sexo \n");                                            
+printf("----------------------\n");                                           
+printf("|Feminino  | %d       \n",feminino);                                 
+printf("|Masculino | %d       \n",masculino);                               
+printf("----------------------\n");                                        
 
-printf("\n");                                                                      // pula uma linha para melhor visualizaÁ„o do prompt de comando
+printf("\n");                                                                      
 
-printf("Obrigado por utilizar o nosso sistema\nFinalizando o programa\n");       // printa na tela a mensagem dentro das aspas
+printf("Obrigado por utilizar o nosso sistema\nFinalizando o programa\n");       
 
 	return 0;
 			
