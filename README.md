@@ -16,3 +16,6 @@ I'm going to redo the 'Project Pratic 2' in three different version in Python, f
 First One: Using modularization, arrays and basic functions.
 Second One: Using modularization, arrays and nested functions.
 Third One: Using modularization and Object Oriented Programming
+
+Disclaimer:
+  Both Pratic Projects 2 (in C and Python) are in Brazilian Portuguese, it is going to be avaible in english and also in italian as soon as possible.
