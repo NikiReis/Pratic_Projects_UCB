@@ -18,4 +18,4 @@ Second One: Using modularization, arrays and nested functions.
 Third One: Using modularization and Object Oriented Programming
 
 Disclaimer:
-  Both Pratic Projects 2 (in C and Python) are in Brazilian Portuguese, it is going to be avaible in english and also in italian as soon as possible.
+  Both Pratic Projects 2 (in C and Python) are currently in Brazilian Portuguese, it is going to be avaible in english and also in italian as soon as possible.
