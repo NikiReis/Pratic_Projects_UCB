@@ -6,7 +6,7 @@ Pratic Projects 1 and 2 - Algorithms and Programmation
 
 
 This repository is reserved to save the 2 exams of 'Algorithms and Programmation' that i've studied
-in the first semester of graduation.
+in the first period of graduation.
 
 In this repository you also you find the Pratic Project 2 ( 2nd exam ) but in Python.
 Since i've finished the second exam using C programming language at the college i wanted to redo that exam using python,
