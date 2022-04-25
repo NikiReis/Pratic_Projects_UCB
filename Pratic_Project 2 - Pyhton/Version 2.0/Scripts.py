@@ -15,24 +15,50 @@ def system(userinput,id=0):
                 showarmchair()
 
             case 2:
-                def reserve():
+                def do_reserve():
                     nonlocal id
-                    chair_number = int(input("Digite o numero da poltrona que deseja reservar: "))
+                    chair_number = int(input("Type the armchair that you want reserve: "))
+
                     if chair_data[chair_number][0] == 'D':
                         id += 1
                         chair_data[chair_number][0] = 'R'
                         chair_data[chair_number][1] = str(id)
+                        print(f"ATTENTION, YOU ONLY HAVE 10 SECONDS TO NOTE YOUR TRIP'S ID. ID: {id}")
+                        sleep(10)
+
+                    elif chair_data[chair_number][0] == 'C' or chair_data[chair_number][0] == 'R':
+                        print("Cannot reserve the armchair, it's already selected!")
                     else:
-                        print("Poltrona não encontrada")
-                reserve()
+                        print("Archair not found!")
+                    
+                do_reserve()
 
             case 3:
                 def buy_trip():
-                    chair_number = int(input("Digite o numero da poltrona que deseja comprar: "))
+                    nonlocal id
+                    chair_number = int(input("Type the armchair number that you want reserve: "))
+
                     if chair_data[chair_number][0] == 'R':
+                        print("Reserva Encontrada")
                         ID = int(input("Digite o id da reserva: "))
                         if str(ID) == chair_data[chair_number][1]:
+                            chair_data[chair_number][0] = 'C'
                             print("Passagem comprada")
+
+                    elif chair_data[chair_number][0] == 'D':
+                        id += 1
+                        chair_data[chair_number][0] = 'C'
+                        chair_data[chair_number][1] = str(id)
+                        print("Passagem comprada")
+                        print(f"ATENÇÃO, VOCÊ TEM 10 SEGUNDOS PARA ANOTAR O ID SUA RESEVA. ID: {id}")
+                        sleep(10)
+
+                    elif chair_data[chair_number][0] == 'C':
+                        print("Compra não realizada!")
+                        print("Esta poltrona já foi comprada/reservada para a passagem de outra pessoa!")
+                    else:
+                        print("Poltrona não encontrada")
+                        
 
                 buy_trip()   
 
@@ -40,6 +66,7 @@ def system(userinput,id=0):
                 def cancel_trip():
                     nonlocal id
                     chair_number = int(input("Digite o numero da poltrona que deseja comprar: "))
+
                     if chair_data[chair_number][0] == 'R' or chair_data[chair_number][0] == 'C':
                         ID = int(input("Digite o id da passagem: "))
                         if str(ID) == chair_data[chair_number][1]:
@@ -47,6 +74,7 @@ def system(userinput,id=0):
                             chair_data[chair_number][0] = 'D'
                             chair_data[chair_number][1] = '0'
                             id -= 1 
+
                 cancel_trip()
             case 5:
                 break
@@ -55,4 +83,5 @@ def system(userinput,id=0):
         
     
 system(5)
+
 
