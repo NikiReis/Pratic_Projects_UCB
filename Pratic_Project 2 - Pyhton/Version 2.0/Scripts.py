@@ -1,4 +1,5 @@
 from Vars import*
+from time import sleep
 
 chair_data[20][0] = 'R'
 chair_data[20][1] = '1' 
@@ -10,8 +11,13 @@ def system(userinput,id=0):
             case 1:
 
                 def showarmchair():
-                    for x in range(0,armschairs):
-                        print("D\n")
+                    for x in range(0,len(chair_data)):
+                        if chair_data[x][0] == "D":
+                            print(f"\033[1;32m{x}\033[m",end=' ')
+                        elif chair_data[x][0] == "C":
+                            print(f"\033[1;36{x}\033[m",end=' ')
+                        else:
+                            print(f"\033[1;31m{x}\033[m",end=' ')
                 showarmchair()
 
             case 2:
@@ -74,7 +80,13 @@ def system(userinput,id=0):
                             chair_data[chair_number][0] = 'D'
                             chair_data[chair_number][1] = '0'
                             id -= 1 
-
+                        else:
+                            print("ID informado não condiz com ID da poltrona!\n")
+                            print("Somente o propietário pode cancelar a reserva / compra")
+                    elif chair_data[chair_number][0] == 'D':
+                        print("Não é possível cancelar uma passagem que não tenha sido comprada / reservada")
+                    else:
+                        print("Poltrona não encontrada")
                 cancel_trip()
             case 5:
                 break
@@ -82,6 +94,6 @@ def system(userinput,id=0):
         return id
         
     
-system(5)
+system(1)
 
 
