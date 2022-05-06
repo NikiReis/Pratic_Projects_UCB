@@ -4,6 +4,12 @@ from time import sleep
 chair_data[20][0] = 'R'
 chair_data[20][1] = '1' 
 
+reserved_chairs = 0
+bought_chairs = 0
+disponible = armschairs
+
+
+
 def system(userinput,id=0):
     while True:
 
@@ -95,5 +101,32 @@ def system(userinput,id=0):
         
     
 system(1)
+
+
+def incremet_bought():
+    global bought_chairs
+    global disponible 
+
+    disponible -= 1
+    if disponible <= 0:
+        disponible = 0
+
+    boughtvalue += tripvalue
+    bought_chairs += 1 
+
+def decrement_bought():
+    global bought_chairs
+    global disponible 
+
+    disponible += 1
+    boughtvalue -= tripvalue
+    bought_chairs -= 1
+
+def increment_reserve():
+    global reserved_chairs
+    reserve_value += tripvalue
+
+def decrement_reserve():
+    reserve_value -= tripvalue
 
 
