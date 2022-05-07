@@ -1,18 +1,10 @@
 from Vars import*
 from time import sleep
 
-chair_data[20][0] = 'R'
-chair_data[20][1] = '1' 
-
-reserved_chairs = 0
-bought_chairs = 0
-disponible = armschairs
-
-
-
 def system(userinput,id=0):
     while True:
 
+        display()
         match userinput:
             case 1:
 
@@ -35,6 +27,7 @@ def system(userinput,id=0):
                         id += 1
                         chair_data[chair_number][0] = 'R'
                         chair_data[chair_number][1] = str(id)
+                        increment_reserve()
                         print(f"ATTENTION, YOU ONLY HAVE 10 SECONDS TO NOTE YOUR TRIP'S ID. ID: {id}")
                         sleep(10)
 
@@ -42,13 +35,13 @@ def system(userinput,id=0):
                         print("Cannot reserve the armchair, it's already selected!")
                     else:
                         print("Archair not found!")
-                    
+                        
                 do_reserve()
 
             case 3:
                 def buy_trip():
                     nonlocal id
-                    chair_number = int(input("Type the armchair number that you want reserve: "))
+                    chair_number = int(input("Type the armchair number that you want to buy: "))
 
                     if chair_data[chair_number][0] == 'R':
                         print("Reserva Encontrada")
@@ -61,6 +54,7 @@ def system(userinput,id=0):
                         id += 1
                         chair_data[chair_number][0] = 'C'
                         chair_data[chair_number][1] = str(id)
+                        incremet_purchase()
                         print("Passagem comprada")
                         print(f"ATENÇÃO, VOCÊ TEM 10 SEGUNDOS PARA ANOTAR O ID SUA RESEVA. ID: {id}")
                         sleep(10)
@@ -70,25 +64,39 @@ def system(userinput,id=0):
                         print("Esta poltrona já foi comprada/reservada para a passagem de outra pessoa!")
                     else:
                         print("Poltrona não encontrada")
-                        
+                            
 
                 buy_trip()   
 
             case 4:
                 def cancel_trip():
                     nonlocal id
-                    chair_number = int(input("Digite o numero da poltrona que deseja comprar: "))
+                    chair_number = int(input("Digite o numero da poltrona que deseja cancelar: "))
 
-                    if chair_data[chair_number][0] == 'R' or chair_data[chair_number][0] == 'C':
+                    if chair_data[chair_number][0] == 'R':
                         ID = int(input("Digite o id da passagem: "))
                         if str(ID) == chair_data[chair_number][1]:
                             print("Passagem cancelada")
                             chair_data[chair_number][0] = 'D'
                             chair_data[chair_number][1] = '0'
+                            decrement_reserve()
                             id -= 1 
                         else:
                             print("ID informado não condiz com ID da poltrona!\n")
-                            print("Somente o propietário pode cancelar a reserva / compra")
+                            print("Somente o propietário pode cancelar a reserva")
+
+                    elif chair_data[chair_number][0] == 'C':
+                        ID = int(input("Digite o id da passagem: "))
+                        if str(ID) == chair_data[chair_number][1]:
+                            print("Passagem cancelada")
+                            chair_data[chair_number][0] = 'D'
+                            chair_data[chair_number][1] = '0'
+                            decrement_purchase()
+                            id -= 1 
+                        else:
+                            print("ID informado não condiz com ID da poltrona!\n")
+                            print("Somente o propietário pode cancelar a compra")
+
                     elif chair_data[chair_number][0] == 'D':
                         print("Não é possível cancelar uma passagem que não tenha sido comprada / reservada")
                     else:
@@ -98,35 +106,11 @@ def system(userinput,id=0):
                 break
 
         return id
-        
+answer = int(input("\nType the desired option: "))
+system(answer)
+
     
-system(1)
 
 
-def incremet_bought():
-    global bought_chairs
-    global disponible 
-
-    disponible -= 1
-    if disponible <= 0:
-        disponible = 0
-
-    boughtvalue += tripvalue
-    bought_chairs += 1 
-
-def decrement_bought():
-    global bought_chairs
-    global disponible 
-
-    disponible += 1
-    boughtvalue -= tripvalue
-    bought_chairs -= 1
-
-def increment_reserve():
-    global reserved_chairs
-    reserve_value += tripvalue
-
-def decrement_reserve():
-    reserve_value -= tripvalue
-
+    
 
