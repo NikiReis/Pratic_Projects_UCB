@@ -1,10 +1,9 @@
 from Vars import*
 from time import sleep
 
-def system(userinput,id=0):
-    while True:
-
-        display()
+while True:
+    display()
+    def system(userinput):
         match userinput:
             case 1:
 
@@ -20,7 +19,7 @@ def system(userinput,id=0):
 
             case 2:
                 def do_reserve():
-                    nonlocal id
+                    global id
                     chair_number = int(input("Type the armchair that you want reserve: "))
 
                     if chair_data[chair_number][0] == 'D':
@@ -35,12 +34,12 @@ def system(userinput,id=0):
                         print("Cannot reserve the armchair, it's already selected!")
                     else:
                         print("Archair not found!")
-                        
+                                
                 do_reserve()
 
             case 3:
                 def buy_trip():
-                    nonlocal id
+                    global id
                     chair_number = int(input("Type the armchair number that you want to buy: "))
 
                     if chair_data[chair_number][0] == 'R':
@@ -64,13 +63,13 @@ def system(userinput,id=0):
                         print("Esta poltrona já foi comprada/reservada para a passagem de outra pessoa!")
                     else:
                         print("Poltrona não encontrada")
-                            
+                                    
 
                 buy_trip()   
 
             case 4:
                 def cancel_trip():
-                    nonlocal id
+                    global id
                     chair_number = int(input("Digite o numero da poltrona que deseja cancelar: "))
 
                     if chair_data[chair_number][0] == 'R':
@@ -102,15 +101,11 @@ def system(userinput,id=0):
                     else:
                         print("Poltrona não encontrada")
                 cancel_trip()
-            case 5:
-                break
 
-        return id
-answer = int(input("\nType the desired option: "))
-system(answer)
-
+    answer = int(input("\nType the desired option: "))
+    if answer == 5:
+        break
+    else:
+        system(answer)
+ 
     
-
-
-    
-
