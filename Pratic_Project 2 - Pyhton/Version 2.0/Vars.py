@@ -13,8 +13,6 @@ purchase_chairs = 0
 purchase_amount = 0
 reserve_amount = 0
 
-
-
 def trip_informations(): 
     while True:
         origin = str(input("Type the origin name: ")).strip()
