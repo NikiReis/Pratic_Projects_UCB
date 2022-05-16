@@ -43,9 +43,3 @@ def display():
 
 def clear():
         os.system("cls" if os.name=='nt' else "clear")
-
-def end_of_program():
-    print(f"Thanks for using our sistem's trip, we hope you enjoied {emoji.emojize(':blush:',':blush:')}")
-    print("Here it is some data about the usage")
-    print(f"{disponible} amrschairs were still avaible\n{reserve_chairs} armchairs were reserved\n{purchase_chairs} armchairs were bought")
-    print(f"Total purchase amount: {purchase_amount}\nReservation total amount: {reserve_amount}")
