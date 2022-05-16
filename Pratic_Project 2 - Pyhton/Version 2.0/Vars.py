@@ -1,63 +1,19 @@
 import random
+import os
+import emoji
 
 armschairs = random.randint(90,200)
-tripvalue = random.randint(250,2000)
+tripamount = random.randint(250,2000)
 
-id = 0
+new_id = 0
 chair_data = list()
 disponible = armschairs
-reserved_chairs = 0
+reserve_chairs = 0
 purchase_chairs = 0
-purchase_value = 0
-reserve_value = 0
+purchase_amount = 0
+reserve_amount = 0
 
-def display():
-	print("[1] Mostrar Poltronas Disponíveis/Reservadas/Compradas")
-	print("[2] Realizar uma Reserva")
-	print("[3] Comprar uma passagem")
-	print("[4] Cancelar uma Reserva/Compra")
-	print("[5] Sair do Sistema")
 
-def incremet_purchase():
-        global disponible
-        global purchase_value
-        global purchase_chairs
-
-        disponible -= 1
-        purchase_value += tripvalue
-        purchase_chairs += 1
-
-def decrement_purchase():
-    global disponible
-    global purchase_value
-    global purchase_chairs
-
-    purchase_value -= tripvalue
-    purchase_chairs -= 1
-    disponible += 1
-
-def increment_reserve(): 
-    global reserved_chairs
-    global reserve_value
-    global disponible
-
-    reserve_value += tripvalue
-    reserved_chairs += 1
-    disponible -= 1
-
-def decrement_reserve():
-    global reserved_chairs
-    global reserve_value
-    global disponible
-
-    reserve_value -= tripvalue
-    if reserve_value < 0:
-        reserve_value = 0
-    reserved_chairs -= 1
-    disponible += 1
-
-for x in range(1,armschairs):
-    chair_data.append(['D','0'])
 
 def trip_informations(): 
     while True:
@@ -74,6 +30,24 @@ def trip_informations():
             print("Plese, try again!\n")
         else:
             break
+
 trip_informations()
 
+for x in range(0,armschairs):
+    chair_data.append(['D','0'])
 
+def display():
+	print("\n[1] Mostrar Poltronas Disponíveis/Reservadas/Compradas")
+	print("[2] Realizar uma Reserva")
+	print("[3] Comprar uma passagem")
+	print("[4] Cancelar uma Reserva/Compra")
+	print("[5] Sair do Sistema")
+
+def clear():
+        os.system("cls" if os.name=='nt' else "clear")
+
+def end_of_program():
+    print(f"Thanks for using our sistem's trip, we hope you enjoied {emoji.emojize(':blush:',':blush:')}")
+    print("Here it is some data about the usage")
+    print(f"{disponible} amrschairs were still avaible\n{reserve_chairs} armchairs were reserved\n{purchase_chairs} armchairs were bought")
+    print(f"Total purchase amount: {purchase_amount}\nReservation total amount: {reserve_amount}")
